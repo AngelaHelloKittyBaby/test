@@ -1,0 +1,10 @@
+# 这是一个只读保护文件示例
+# 该文件仅用于演示只读保护功能
+# 程序可以读取此文件，但不能修改、删除或重命名
+
+2024-01-15 09:00:00 INFO Legacy system startup
+2024-01-15 09:00:05 INFO Loading configuration from legacy config
+2024-01-15 09:00:10 WARNING Deprecated API usage detected
+2024-01-15 09:00:15 ERROR Legacy database connection failed
+2024-01-15 09:00:20 INFO Fallback to backup database
+2024-01-15 09:00:25 INFO Legacy system ready

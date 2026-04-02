@@ -1,0 +1,8 @@
+# 日志智能清洗与统计工具依赖库
+# 安装命令: pip install -r requirements.txt
+
+# YAML配置解析
+pyyaml>=6.0
+
+# 日志处理（可选，用于更高级的日志解析）
+# python-json-logger>=2.0.0

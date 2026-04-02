@@ -1,0 +1,68 @@
+# 异常日志归档
+# 生成时间: 2026-04-01 22:11:46
+# 异常总数: 7
+================================================================================
+
+[1]
+Level: ERROR
+Category: database
+Timestamp: 2024-01-15 09:00:15
+IP: None
+User: None
+Content: 2024-01-15 09:00:15 ERROR Legacy database connection failed
+--------------------------------------------------------------------------------
+
+[2]
+Level: ERROR
+Category: database
+Timestamp: 2024-01-15 08:31:16
+IP: None
+User: None
+Content: 2024-01-15 08:31:16 ERROR Failed to connect to database: Connection timeout
+--------------------------------------------------------------------------------
+
+[3]
+Level: ERROR
+Category: exception
+Timestamp: 2024-01-15 08:32:30
+IP: None
+User: None
+Content: 2024-01-15 08:32:30 ERROR Exception in thread "main": NullPointerException
+--------------------------------------------------------------------------------
+
+[4]
+Level: ERROR
+Category: exception
+Timestamp: 2024-01-15 08:33:10
+IP: None
+User: None
+Content: 2024-01-15 08:33:10 ERROR Authentication failed for user: admin
+--------------------------------------------------------------------------------
+
+[5]
+Level: ERROR
+Category: authentication
+Timestamp: 2024-01-15 08:33:15
+IP: 192.168.1.200
+User: None
+Content: 2024-01-15 08:33:15 WARNING Multiple failed login attempts from ip:192.168.1.200
+--------------------------------------------------------------------------------
+
+[6]
+Level: ERROR
+Category: exception
+Timestamp: 2024-01-15 08:34:30
+IP: None
+User: None
+Content: 2024-01-15 08:34:30 ERROR OutOfMemoryError: Java heap space
+--------------------------------------------------------------------------------
+
+[7]
+Level: ERROR
+Category: exception
+Timestamp: 2024-01-15 08:36:15
+IP: None
+User: None
+Content: 2024-01-15 08:36:15 ERROR File not found: /data/config.xml
+--------------------------------------------------------------------------------
+

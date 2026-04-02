@@ -1,0 +1,100 @@
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 已注册过滤器插件: KeywordFilter (优先级: 10)
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 已加载关键词过滤器，关键词数量: 3
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 已注册过滤器插件: LengthFilter (优先级: 20)
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 已加载长度过滤器，范围: 10-2048
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 程序启动
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 检查运行环境...
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 环境检查通过
+2026-04-01 22:10:55 - LogAnalyzer - INFO - ============================================================
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 开始执行任务: 数据处理流水线
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 启动时间: 2026-04-01 22:10:55
+2026-04-01 22:10:55 - LogAnalyzer - INFO - ============================================================
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 步骤1: 读取日志文件
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 开始扫描目录: ./data/input
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 找到 2 个日志文件
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 开始读取文件: ./data/input\legacy.log
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 文件为只读保护: ./data/input\legacy.log
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 文件处理完成: ./data/input\legacy.log
+2026-04-01 22:10:55 - LogAnalyzer - INFO -   - 总行数: 10
+2026-04-01 22:10:55 - LogAnalyzer - INFO -   - 有效行数: 9
+2026-04-01 22:10:55 - LogAnalyzer - INFO -   - 有效率: 90.0%
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 开始读取文件: ./data/input\sample.log
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 文件处理完成: ./data/input\sample.log
+2026-04-01 22:10:55 - LogAnalyzer - INFO -   - 总行数: 20
+2026-04-01 22:10:55 - LogAnalyzer - INFO -   - 有效行数: 19
+2026-04-01 22:10:55 - LogAnalyzer - INFO -   - 有效率: 95.0%
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 成功读取 2/2 个文件
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 读取完成: 2/2 个文件成功
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 步骤2: 合并日志行
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 合并完成: 共 28 行
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 步骤3: 执行预处理
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 预处理完成: 28 行
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 步骤4: 处理数据
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 开始处理 28 行日志数据
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 数据处理完成: 有效 28, 无效 0, 异常 7
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 处理完成: 总计 28, 有效 28, 异常 7
+2026-04-01 22:10:55 - LogAnalyzer - INFO - 步骤5: 执行后处理
+2026-04-01 22:10:55 - LogAnalyzer - ERROR - 数据处理流水线执行失败
+Traceback (most recent call last):
+  File "D:\学习\test\data_pipeline.py", line 112, in execute
+    statistics = self._processor.generate_statistics(process_result)
+  File "D:\学习\test\data_processor.py", line 214, in generate_statistics
+    "top_ip_addresses": self._get_top_n(process_result.ip_stats, top_n),
+                        ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\学习\test\data_processor.py", line 234, in _get_top_n
+    return counter.most_common(n)
+           ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'most_common'
+2026-04-01 22:10:55 - LogAnalyzer - ERROR - 程序执行失败
+Traceback (most recent call last):
+  File "D:\学习\test\main.py", line 69, in run
+    self._print_summary(result)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "D:\学习\test\main.py", line 138, in _print_summary
+    print("📊 处理结果摘要")
+    ~~~~~^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'gbk' codec can't encode character '\U0001f4ca' in position 0: illegal multibyte sequence
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 已注册过滤器插件: KeywordFilter (优先级: 10)
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 已加载关键词过滤器，关键词数量: 3
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 已注册过滤器插件: LengthFilter (优先级: 20)
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 已加载长度过滤器，范围: 10-2048
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 程序启动
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 检查运行环境...
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 环境检查通过
+2026-04-01 22:11:46 - LogAnalyzer - INFO - ============================================================
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 开始执行任务: 数据处理流水线
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 启动时间: 2026-04-01 22:11:46
+2026-04-01 22:11:46 - LogAnalyzer - INFO - ============================================================
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 步骤1: 读取日志文件
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 开始扫描目录: ./data/input
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 找到 2 个日志文件
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 开始读取文件: ./data/input\legacy.log
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 文件为只读保护: ./data/input\legacy.log
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 文件处理完成: ./data/input\legacy.log
+2026-04-01 22:11:46 - LogAnalyzer - INFO -   - 总行数: 10
+2026-04-01 22:11:46 - LogAnalyzer - INFO -   - 有效行数: 9
+2026-04-01 22:11:46 - LogAnalyzer - INFO -   - 有效率: 90.0%
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 开始读取文件: ./data/input\sample.log
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 文件处理完成: ./data/input\sample.log
+2026-04-01 22:11:46 - LogAnalyzer - INFO -   - 总行数: 20
+2026-04-01 22:11:46 - LogAnalyzer - INFO -   - 有效行数: 19
+2026-04-01 22:11:46 - LogAnalyzer - INFO -   - 有效率: 95.0%
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 成功读取 2/2 个文件
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 读取完成: 2/2 个文件成功
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 步骤2: 合并日志行
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 合并完成: 共 28 行
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 步骤3: 执行预处理
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 预处理完成: 28 行
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 步骤4: 处理数据
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 开始处理 28 行日志数据
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 数据处理完成: 有效 28, 无效 0, 异常 7
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 处理完成: 总计 28, 有效 28, 异常 7
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 步骤5: 执行后处理
+2026-04-01 22:11:46 - LogAnalyzer - INFO - ============================================================
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 任务完成: 数据处理流水线
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 状态: 成功
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 结束时间: 2026-04-01 22:11:46
+2026-04-01 22:11:46 - LogAnalyzer - INFO - ============================================================
+2026-04-01 22:11:46 - LogAnalyzer - INFO - Markdown报告已生成: ./build/dist\log_report_20260401_221146.md
+2026-04-01 22:11:46 - LogAnalyzer - INFO - JSON统计文件已生成: ./build/dist\log_report_20260401_221146.json
+2026-04-01 22:11:46 - LogAnalyzer - INFO - 异常日志已归档: ./build/dist\log_report_20260401_221146_exceptions.log

@@ -1,0 +1,20 @@
+2024-01-15 08:30:25 INFO User login successful user_id:12345 ip:192.168.1.100
+2024-01-15 08:30:26 DEBUG Database connection established
+2024-01-15 08:31:15 INFO Request received: GET /api/users
+2024-01-15 08:31:16 ERROR Failed to connect to database: Connection timeout
+2024-01-15 08:31:17 WARNING Cache miss for key: user_12345
+2024-01-15 08:32:01 INFO User logout user_id:12345 ip:192.168.1.100
+2024-01-15 08:32:15 INFO User login successful user_id:67890 ip:192.168.1.101
+2024-01-15 08:32:30 ERROR Exception in thread "main": NullPointerException
+2024-01-15 08:33:00 INFO Request received: POST /api/login
+2024-01-15 08:33:05 DEBUG Processing authentication
+2024-01-15 08:33:10 ERROR Authentication failed for user: admin
+2024-01-15 08:33:15 WARNING Multiple failed login attempts from ip:192.168.1.200
+2024-01-15 08:34:00 INFO Database query executed in 45ms
+2024-01-15 08:34:30 ERROR OutOfMemoryError: Java heap space
+2024-01-15 08:35:00 INFO Cache refreshed successfully
+2024-01-15 08:35:30 DEBUG heartbeat check
+2024-01-15 08:36:00 INFO User login successful user_id:11111 ip:192.168.1.102
+2024-01-15 08:36:15 ERROR File not found: /data/config.xml
+2024-01-15 08:36:30 WARNING Disk space low: 85% used
+2024-01-15 08:37:00 INFO Request received: GET /api/status
