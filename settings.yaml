@@ -1,0 +1,68 @@
+# 日志智能清洗与统计工具配置文件
+# 所有路径使用相对路径
+
+# ==================== 路径配置 ====================
+paths:
+  input_dir: "./data/input"
+  output_dir: "./build/dist"
+  readonly_files:
+    - "./data/input/legacy.log"
+
+# ==================== 文件格式配置 ====================
+file_formats:
+  allowed_extensions:
+    - ".log"
+  report_format: ".md"
+  stats_format: ".json"
+
+# ==================== 命名规范配置 ====================
+naming:
+  output_prefix: "log_report_"
+  timestamp_format: "%Y%m%d_%H%M%S"
+
+# ==================== 日志解析配置 ====================
+log_parsing:
+  log_levels:
+    - "DEBUG"
+    - "INFO"
+    - "WARNING"
+    - "ERROR"
+    - "CRITICAL"
+  exception_levels:
+    - "ERROR"
+    - "CRITICAL"
+
+# ==================== 过滤规则配置 ====================
+filters:
+  skip_keywords:
+    - "heartbeat"
+    - "ping"
+    - "keepalive"
+  min_line_length: 10
+  max_line_length: 2048
+  encoding: "utf-8"
+
+# ==================== 统计配置 ====================
+statistics:
+  keyword_stats:
+    - "login"
+    - "logout"
+    - "request"
+    - "response"
+    - "error"
+    - "timeout"
+    - "database"
+    - "cache"
+  top_n_limit: 10
+
+# ==================== 校验规则配置 ====================
+validation:
+  ip_pattern: '\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b'
+  user_id_pattern: 'user[_-]?id[:\s]*([\w-]+)'
+
+# ==================== 程序日志配置 ====================
+program_logging:
+  level: "INFO"
+  console_output: true
+  file_output: true
+  log_file: "./build/dist/app.log"
