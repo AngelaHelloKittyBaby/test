@@ -1,0 +1,31 @@
+2024-01-15 08:00:01 INFO  Application started successfully
+2024-01-15 08:00:02 INFO  Loading configuration from settings.yaml
+2024-01-15 08:00:03 DEBUG Database connection established to localhost:5432
+2024-01-15 08:00:05 INFO  User login attempt from IP 192.168.1.100 user_id=user001
+2024-01-15 08:00:06 INFO  User login successful: user001
+2024-01-15 08:00:10 WARNING High memory usage detected: 85% utilized
+2024-01-15 08:00:15 INFO  Processing batch job #1234
+2024-01-15 08:00:20 ERROR Database connection timeout after 30 seconds
+2024-01-15 08:00:21 ERROR Failed to execute query: SELECT * FROM users
+2024-01-15 08:00:25 WARNING Cache miss rate exceeded threshold: 45%
+2024-01-15 08:00:30 INFO  Retrying database connection...
+2024-01-15 08:00:32 INFO  Database connection restored
+2024-01-15 08:00:35 DEBUG Processing request from 10.0.0.50
+2024-01-15 08:00:40 INFO  API request: GET /api/users from 192.168.1.101
+2024-01-15 08:00:42 INFO  API response: 200 OK in 45ms
+2024-01-15 08:00:45 ERROR Exception: NullPointerException in UserService.java:142
+2024-01-15 08:00:46 ERROR Stack trace: at com.app.UserService.getUser(UserService.java:142)
+2024-01-15 08:00:50 WARNING Slow query detected: 2.5 seconds execution time
+2024-01-15 08:00:55 INFO  User logout: user001 from 192.168.1.100
+2024-01-15 08:01:00 INFO  Scheduled maintenance task started
+2024-01-15 08:01:05 DEBUG Cleaning up expired sessions
+2024-01-15 08:01:10 INFO  Removed 150 expired sessions
+2024-01-15 08:01:15 WARNING Disk space low: 15% remaining
+2024-01-15 08:01:20 ERROR Failed to write log file: disk full
+2024-01-15 08:01:25 CRITICAL System health check failed
+2024-01-15 08:01:30 INFO  Sending alert notification to admin@example.com
+2024-01-15 08:01:35 INFO  Alert sent successfully
+2024-01-15 08:01:40 DEBUG Memory cleanup completed
+2024-01-15 08:01:45 INFO  Application running normally
+2024-01-15 08:01:50 INFO  Request processed: POST /api/data from 10.0.0.55
+2024-01-15 08:01:55 INFO  Response sent: 201 Created in 120ms

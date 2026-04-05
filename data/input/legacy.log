@@ -1,0 +1,5 @@
+2024-01-14 00:00:01 INFO  Legacy system log - READ ONLY FILE
+2024-01-14 00:00:05 INFO  This file should not be modified
+2024-01-14 00:00:10 WARNING Legacy log entry for historical reference
+2024-01-14 00:00:15 ERROR Legacy error: Old system crash
+2024-01-14 00:00:20 INFO  End of legacy log
