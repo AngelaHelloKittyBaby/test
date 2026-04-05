@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info
+dist/
+build/
+*.venv
+venv/
+ENV/
+
+# 程序输出目录
+build/dist/
+
+# 测试数据
+data/input/*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
