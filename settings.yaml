@@ -1,0 +1,112 @@
+# 日志智能清洗与统计工具配置文件
+# 所有路径使用相对路径，基于程序运行目录
+
+# ==================== 路径配置 ====================
+paths:
+  # 输入目录：仅允许读取该目录下的 .log 文件
+  input_dir: "./data/input"
+  # 输出目录：所有报告和统计文件写入该目录
+  output_dir: "./build/dist"
+  # 只读保护文件列表：这些文件只能读取，禁止修改
+  readonly_files:
+    - "./data/input/legacy.log"
+
+# ==================== 文件格式配置 ====================
+file_formats:
+  # 允许处理的输入文件扩展名
+  allowed_extensions:
+    - ".log"
+  # 输出报告格式
+  report_format: ".md"
+  # 输出统计结果格式
+  stats_format: ".json"
+  # 异常日志归档格式
+  archive_format: ".log"
+
+# ==================== 命名规范配置 ====================
+naming:
+  # 输出文件名前缀
+  output_prefix: "log_report_"
+  # 时间戳格式
+  timestamp_format: "%Y%m%d_%H%M%S"
+
+# ==================== 日志解析配置 ====================
+log_parsing:
+  # 支持的日志级别
+  log_levels:
+    - "DEBUG"
+    - "INFO"
+    - "WARNING"
+    - "ERROR"
+    - "CRITICAL"
+  # 需要提取的异常级别
+  exception_levels:
+    - "ERROR"
+    - "CRITICAL"
+  # 日志时间戳格式（用于解析）
+  timestamp_patterns:
+    - "%Y-%m-%d %H:%M:%S"
+    - "%d/%b/%Y:%H:%M:%S"
+    - "%H:%M:%S"
+
+# ==================== 过滤规则配置 ====================
+filters:
+  # 关键词过滤：包含这些关键词的日志行将被跳过
+  skip_keywords:
+    - "heartbeat"
+    - "ping"
+    - "keepalive"
+  # 最小日志长度：低于此长度的行视为无效
+  min_line_length: 10
+  # 最大日志长度：超过此长度的行视为异常
+  max_line_length: 2048
+  # 编码格式
+  encoding: "utf-8"
+  # 编码错误处理方式
+  encoding_errors: "replace"
+
+# ==================== 统计配置 ====================
+statistics:
+  # 关键词统计：统计这些关键词的出现次数
+  keyword_stats:
+    - "login"
+    - "logout"
+    - "request"
+    - "response"
+    - "error"
+    - "timeout"
+    - "database"
+    - "cache"
+  # 访问频次统计时间窗口（分钟）
+  time_window_minutes: 60
+  # Top N 统计
+  top_n_limit: 10
+
+# ==================== 校验规则配置 ====================
+validation:
+  # 必需字段检查
+  required_fields:
+    - "timestamp"
+    - "level"
+    - "message"
+  # 日志格式正则表达式（可选，用于严格校验）
+  log_pattern: '^\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}:\d{2}\s+\w+\s+.*$'
+  # IP地址提取正则
+  ip_pattern: '\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b'
+  # 用户ID提取正则
+  user_id_pattern: 'user[_-]?id[:\s]*([\w-]+)'
+
+# ==================== 程序日志配置 ====================
+program_logging:
+  # 程序运行日志级别
+  level: "INFO"
+  # 是否输出到控制台
+  console_output: true
+  # 是否输出到文件
+  file_output: true
+  # 程序日志文件路径
+  log_file: "./build/dist/app.log"
+  # 日志格式
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  # 日期格式
+  date_format: "%Y-%m-%d %H:%M:%S"

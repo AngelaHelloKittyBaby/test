@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "generated_at": "2026-04-01T22:11:46.674517",
+    "success": true,
+    "execution_time_seconds": 0.002491
+  },
+  "summary": {
+    "total_lines": 28,
+    "valid_lines": 28,
+    "exception_count": 7,
+    "input_files": [
+      "./data/input\\legacy.log",
+      "./data/input\\sample.log"
+    ]
+  },
+  "statistics": {
+    "summary": {
+      "total_lines": 28,
+      "valid_lines": 28,
+      "invalid_lines": 0,
+      "exception_lines": 7,
+      "valid_rate": 100.0,
+      "exception_rate": 25.0
+    },
+    "level_distribution": {
+      "INFO": 13,
+      "WARNING": 4,
+      "ERROR": 6,
+      "DEBUG": 2
+    },
+    "category_distribution": {
+      "general": 10,
+      "database": 5,
+      "authentication": 5,
+      "http": 2,
+      "cache": 2,
+      "exception": 4
+    },
+    "keyword_frequency": {
+      "error": 6,
+      "database": 5,
+      "login": 5,
+      "request": 3,
+      "timeout": 1,
+      "cache": 2,
+      "logout": 1
+    },
+    "time_distribution": {
+      "09": 6,
+      "08": 19
+    },
+    "top_ip_addresses": [
+      [
+        "192.168.1.100",
+        2
+      ],
+      [
+        "192.168.1.101",
+        1
+      ],
+      [
+        "192.168.1.200",
+        1
+      ],
+      [
+        "192.168.1.102",
+        1
+      ]
+    ],
+    "exception_summary": {
+      "count": 7,
+      "types": {
+        "ERROR": 7
+      }
+    }
+  },
+  "exceptions": [
+    {
+      "line": "2024-01-15 09:00:15 ERROR Legacy database connection failed",
+      "level": "ERROR",
+      "category": "database",
+      "timestamp": "2024-01-15 09:00:15",
+      "ip_address": null,
+      "user_id": null
+    },
+    {
+      "line": "2024-01-15 08:31:16 ERROR Failed to connect to database: Connection timeout",
+      "level": "ERROR",
+      "category": "database",
+      "timestamp": "2024-01-15 08:31:16",
+      "ip_address": null,
+      "user_id": null
+    },
+    {
+      "line": "2024-01-15 08:32:30 ERROR Exception in thread \"main\": NullPointerException",
+      "level": "ERROR",
+      "category": "exception",
+      "timestamp": "2024-01-15 08:32:30",
+      "ip_address": null,
+      "user_id": null
+    },
+    {
+      "line": "2024-01-15 08:33:10 ERROR Authentication failed for user: admin",
+      "level": "ERROR",
+      "category": "exception",
+      "timestamp": "2024-01-15 08:33:10",
+      "ip_address": null,
+      "user_id": null
+    },
+    {
+      "line": "2024-01-15 08:33:15 WARNING Multiple failed login attempts from ip:192.168.1.200",
+      "level": "ERROR",
+      "category": "authentication",
+      "timestamp": "2024-01-15 08:33:15",
+      "ip_address": "192.168.1.200",
+      "user_id": null
+    },
+    {
+      "line": "2024-01-15 08:34:30 ERROR OutOfMemoryError: Java heap space",
+      "level": "ERROR",
+      "category": "exception",
+      "timestamp": "2024-01-15 08:34:30",
+      "ip_address": null,
+      "user_id": null
+    },
+    {
+      "line": "2024-01-15 08:36:15 ERROR File not found: /data/config.xml",
+      "level": "ERROR",
+      "category": "exception",
+      "timestamp": "2024-01-15 08:36:15",
+      "ip_address": null,
+      "user_id": null
+    }
+  ],
+  "errors": []
+}
